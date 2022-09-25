@@ -1,0 +1,38 @@
+@import './color','./Header','./Main','./Welcome';
+
+
+
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin:  0;
+    padding: 0;
+    background: rgb(33,66,108);
+    background: radial-gradient(circle, rgba(27,52,83,1) 11%, rgba(38,40,72,1) 100%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.Container {
+    width: 100%;
+    height: 100%;
+    .Pick {
+        color: white;
+        margin-left: 25%;
+        margin-top: 2rem;
+    }
+    
+    
+}
+.Rules {
+    position: fixed;
+    bottom: 1rem;
+    right: 45%;
+    color: white;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    padding: 0.4em 0.8em;
+    cursor: pointer;
+    font-size: 19px;
+}

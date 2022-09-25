@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import 'animate.css';
+import Started from "./Started";
+import Welcome from "./Welcome";
 
 function App() {
+  const [Score, setScore] = useState(0)
+  const [High, setHighScore] = useState(0)
+  const [Start, setStart] = useState(false)
+  useEffect(() => {
+    let pastHigh = localStorage.getItem('High');
+    if (pastHigh > High){
+      setHighScore(pastHigh)
+    }
+  }, [])
+  useEffect(() => {
+    if (Score > High){
+      setHighScore(Score)
+      localStorage.setItem('High', Score);
+    }
+  }, [Score])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+      {!Start && <Welcome high={High} Start={setStart}/>}
+      {Start && <Started setScore={setScore} score={Score} high={High}/>}
     </div>
   );
 }

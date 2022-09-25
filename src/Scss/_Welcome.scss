@@ -1,0 +1,74 @@
+.Container_Welcome {
+    color: #D9D9D9;
+    border: 3px solid #D9D9D9;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 400px;
+    min-width: 200px;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 15%;
+
+
+    &_Menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap:1.5rem;
+
+        &_Bot {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            .current {
+                width: 80px;
+                height: 80px;
+                background-color: #D9D9D9;
+                border-radius: 10px;
+                color: $Dark-Text;
+                font-size: 64px;
+                padding: .5rem;
+                &_title {
+                    color:$Score-Text;
+                    font-size: 14px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            .high {
+                width: 80px;
+                height: 80px;
+                padding: .5rem;
+                background-color: #D9D9D9;
+                border-radius: 10px;
+                color: $Dark-Text;
+                font-size: 64px;
+                &_title {
+                    color:$Score-Text;
+                    font-size: 14px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            
+        }
+        &_Mid {
+            button {
+                padding: 0.81rem 1.2rem;
+                background-color: transparent;
+                border: 1px solid #D9D9D9;
+                border-radius: 10px;
+                color: #D9D9D9;
+                cursor: pointer;
+            }
+            button:active {
+                opacity: 0.5;
+            }
+        }
+        &_Top {
+           font-size: 42px; 
+        }
+
+    }
+}

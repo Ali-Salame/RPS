@@ -1,0 +1,121 @@
+.Container_Main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 4rem;
+    min-width: 382px;
+    .element {
+        background-color: #D9D9D9;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        img {
+            width: 60%;
+        }
+    }
+    .element:active {
+        opacity: .5;
+    }
+    
+    &_Upper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+        padding: 0;
+        margin: 0;
+        .Paper {
+            box-shadow: 0px 0px 0px 15px $Paper-gradient;
+            -webkit-box-shadow: 0px 0px 0px 15px $Paper-gradient;
+            -moz-box-shadow: 0px 0px 0px 15px $Paper-gradient;
+        }
+        .Scissors {
+            box-shadow: 0px 0px 0px 15px $Scissors-gradient;
+            -moz-box-shadow: 0px 0px 0px 15px $Scissors-gradient;
+            -webkit-box-shadow: 0px 0px 0px 15px $Scissors-gradient;
+        }
+        .Rock {
+            box-shadow: 0px 0px 0px 15px $rock-gradient;
+            -webkit-box-shadow: 0px 0px 0px 15px $rock-gradient;
+            -moz-box-shadow: 0px 0px 0px 15px $rock-gradient;
+        }
+        .empty {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+    }
+    &_Lower {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        .Rock {
+            box-shadow: 0px 0px 0px 15px $rock-gradient;
+            -webkit-box-shadow: 0px 0px 0px 15px $rock-gradient;
+            -moz-box-shadow: 0px 0px 0px 15px $rock-gradient;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    }
+    h3 {
+        color: #D9D9D9;
+        font-size: 18px;
+    }
+    .Result {
+        background-color: rgba($color: #000000, $alpha: .5);
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_main {
+            display: flex;
+            flex-direction: column;
+            background-color: #D9D9D9;
+            min-width: 200px;
+            width: 300px;
+            max-width: 500px;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            gap: 3rem;
+            
+            &_Win {
+                color: rgb(0, 93, 0);
+                font-size: 32px;
+                margin-left: 1rem;
+            }
+            &_Lose {
+                color: rgb(150, 6, 6);
+                font-size: 32px;
+            }
+            &_Draw {
+                color: rgb(176, 115, 0);
+                font-size: 32px;
+                margin-left: 1rem;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                font-size: 18px;
+                background-color: transparent;
+                border: 2px solid black;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
